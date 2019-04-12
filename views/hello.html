@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      .red{
+        color:red;
+      }
+      .yellow{
+        color:yellow;
+
+      }
+    </style>
+
+  </head>
+  <body>
+       <p>
+         HELLO {{name}} !
+    </p>
+    <p>
+      <ul >
+       {% for i in colors %}
+        <li class="{{colors_id}}">{{ i }}</li>
+       {% endfor %}
+    </ul>
+   
+    </p>
+      
+   <!--  <nav>
+ 
+     <a href="bye?name={{name}}" >Deconnect</a>
+    </nav>-->
+    
+    <form method="post" action="bye">
+            <input name="name" type="hidden" value="{{name}}">
+          
+            <button>
+                GO
+            </button>     
+      
+      </form>
+    
+  </body>
+</html>
